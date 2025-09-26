@@ -1414,17 +1414,19 @@ export default function QRCodeGenerator({
               </span>
             </Tooltip>
             <Tooltip title="Share QR Code" sx={uniformTooltipStyles}>
-              <IconButton
-                onClick={shareQR}
-                disabled={!formData.content}
-                sx={{
-                  bgcolor: 'action.hover',
-                  '&:hover': { bgcolor: 'success.light', color: 'success.main' },
-                  '&:disabled': { bgcolor: 'action.disabledBackground' }
-                }}
-              >
-                <ShareIcon />
-              </IconButton>
+              <span>
+                <IconButton
+                  onClick={shareQR}
+                  disabled={!formData.content}
+                  sx={{
+                    bgcolor: 'action.hover',
+                    '&:hover': { bgcolor: 'success.light', color: 'success.main' },
+                    '&:disabled': { bgcolor: 'action.disabledBackground' }
+                  }}
+                >
+                  <ShareIcon />
+                </IconButton>
+              </span>
             </Tooltip>
             <Tooltip title="Copy QR Code URL to Clipboard" sx={uniformTooltipStyles}>
               <IconButton
