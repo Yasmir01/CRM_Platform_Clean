@@ -1399,17 +1399,19 @@ export default function QRCodeGenerator({
         ) : (
           <Stack direction="row" spacing={1} alignItems="center">
             <Tooltip title="Download QR Code with Logo" sx={uniformTooltipStyles}>
-              <IconButton
-                onClick={downloadQR}
-                disabled={!formData.content}
-                sx={{
-                  bgcolor: 'action.hover',
-                  '&:hover': { bgcolor: 'primary.light', color: 'primary.main' },
-                  '&:disabled': { bgcolor: 'action.disabledBackground' }
-                }}
-              >
-                <DownloadIcon />
-              </IconButton>
+              <span>
+                <IconButton
+                  onClick={downloadQR}
+                  disabled={!formData.content}
+                  sx={{
+                    bgcolor: 'action.hover',
+                    '&:hover': { bgcolor: 'primary.light', color: 'primary.main' },
+                    '&:disabled': { bgcolor: 'action.disabledBackground' }
+                  }}
+                >
+                  <DownloadIcon />
+                </IconButton>
+              </span>
             </Tooltip>
             <Tooltip title="Share QR Code" sx={uniformTooltipStyles}>
               <IconButton
