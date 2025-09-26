@@ -538,9 +538,11 @@ export default function MobileDocumentCapture({
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <Stack direction="row" spacing={1}>
           <Tooltip title="Switch Camera" sx={uniformTooltipStyles}>
-            <IconButton onClick={switchCamera} disabled={!cameraActive}>
-              <FlipCameraIcon />
-            </IconButton>
+            <span>
+              <IconButton onClick={switchCamera} disabled={!cameraActive}>
+                <FlipCameraIcon />
+              </IconButton>
+            </span>
           </Tooltip>
           <Tooltip title={`Flash: ${settings.flashMode}`} sx={uniformTooltipStyles}>
             <IconButton onClick={() => setSettings(prev => ({ 
