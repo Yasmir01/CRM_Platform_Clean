@@ -1429,17 +1429,19 @@ export default function QRCodeGenerator({
               </span>
             </Tooltip>
             <Tooltip title="Copy QR Code URL to Clipboard" sx={uniformTooltipStyles}>
-              <IconButton
-                onClick={() => copyToClipboard(generatedQRUrl || generateQRCode())}
-                disabled={!formData.content}
-                sx={{
-                  bgcolor: 'action.hover',
-                  '&:hover': { bgcolor: 'info.light', color: 'info.main' },
-                  '&:disabled': { bgcolor: 'action.disabledBackground' }
-                }}
-              >
-                <CopyIcon />
-              </IconButton>
+              <span>
+                <IconButton
+                  onClick={() => copyToClipboard(generatedQRUrl || generateQRCode())}
+                  disabled={!formData.content}
+                  sx={{
+                    bgcolor: 'action.hover',
+                    '&:hover': { bgcolor: 'info.light', color: 'info.main' },
+                    '&:disabled': { bgcolor: 'action.disabledBackground' }
+                  }}
+                >
+                  <CopyIcon />
+                </IconButton>
+              </span>
             </Tooltip>
             <Button
               variant="contained"
